@@ -1,6 +1,4 @@
 package rest.api.post.demo.models;
-
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -42,8 +40,6 @@ public class Post {
         this.datepub = datepub;
         this.user = user;
     }
-
-
 
 
 
