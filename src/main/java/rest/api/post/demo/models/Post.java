@@ -1,44 +1,47 @@
 package rest.api.post.demo.models;
-
-import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.web.bind.annotation.RequestMapping;
 
-@Document(collection = "Posts")
-
-
+@Document (collection = "Posts")
 public class Post {
+
     @Id
-    private String _id;
+    private String id;
+    private String value;
+    private User user;
+    private int datepub;
 
 
-    private String body;
-    private String title;
 
-    public String get_id() {
-        return _id;
+    public String getId() {
+        return id;
     }
 
-    public void set_id(String _id) {
-        this._id = _id;
+    public String getValue() {
+        return value;
     }
 
-    public String getBody() {
-        return body;
+    public int getDatepub() {
+        return datepub;
     }
 
-    public void setBody(String body) {
-        this.body = body;
+    public User getUser() {
+        return user;
     }
 
-    public String getTitle() {
-        return title;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+
+    public Post(String id, String value, int datepub, User user) {
+        this.id = id;
+        this.value = value;
+        this.datepub = datepub;
+        this.user = user;
     }
+
+
 
 
 
