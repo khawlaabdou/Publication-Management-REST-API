@@ -2,18 +2,18 @@ package rest.api.post.demo.config;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import rest.api.post.demo.repositories.PostRepository;
+import rest.api.post.demo.reposetories.PostRepositpory;
 
 
 //@EnableMongodbrepositories(basePackageClasses = PostRepository.class)
 @Component
 public class MongodbConfig implements CommandLineRunner{
 
-    public MongodbConfig(PostRepository postRepository) {
+    public MongodbConfig(PostRepositpory postRepository) {
         this.postRepository = postRepository;
     }
 
-    private PostRepository postRepository;
+    private PostRepositpory postRepository;
 
 
 

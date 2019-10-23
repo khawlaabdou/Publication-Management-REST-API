@@ -10,8 +10,15 @@ public class Post {
     private String value;
     private User user;
     private int datepub;
+    private String title;
 
+    public String getTitle() {
+        return title;
+    }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
     public String getId() {
         return id;
@@ -33,6 +40,9 @@ public class Post {
         this.user = user;
     }
 
+    public void setValue(String value) {
+        this.value = value;
+    }
 
     public Post(String id, String value, int datepub, User user) {
         this.id = id;
