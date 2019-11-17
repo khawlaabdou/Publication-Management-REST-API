@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import rest.api.post.demo.models.Post;
 import rest.api.post.demo.services.PostService;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -26,7 +27,7 @@ public class PostController {
 
 
     @PostMapping
-    public Post addPost(Post p){
+    public Post addPost( @Valid @RequestBody Post p){
         return postService.create(p);
     }
 

@@ -45,9 +45,9 @@ class PostControllerTest {
     @Test
     void testAddPost() {
 
-        final Post p = new Post("id", "value", 0, null);
-        final Post expectedResult = new Post("id", "value", 0, null);
-        when(mockPostService.create(any(Post.class))).thenReturn(new Post("id", "value", 0, null));
+        final Post p = new Post("id", "value", null, null);
+        final Post expectedResult = new Post("id", "value", null, null);
+        when(mockPostService.create(any(Post.class))).thenReturn(new Post("id", "value", null, null));
 
 
         final Post result = postControllerUnderTest.addPost(p);
@@ -76,8 +76,8 @@ class PostControllerTest {
         final String id = "id";
         final String title = "title";
         final String value = "value";
-        final Post expectedResult = new Post("id", "value", 0, null);
-        when(mockPostService.update("title", "body")).thenReturn(new Post("id", "value", 0, null));
+        final Post expectedResult = new Post("id", "value", null, null);
+        when(mockPostService.update("title", "body")).thenReturn(new Post("id", "value", null, null));
 
         final Post result = postControllerUnderTest.updatePost(id, title, value);
 

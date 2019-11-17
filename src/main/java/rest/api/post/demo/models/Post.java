@@ -9,7 +9,7 @@ public class Post {
     private String id;
     private String value;
     private User user;
-    private int datepub;
+    private String datepub;
     private String title;
 
     public String getTitle() {
@@ -28,7 +28,7 @@ public class Post {
         return value;
     }
 
-    public int getDatepub() {
+    public String getDatepub() {
         return datepub;
     }
 
@@ -44,7 +44,7 @@ public class Post {
         this.value = value;
     }
 
-    public Post(String id, String value, int datepub, User user) {
+    public Post(String id, String value,String  datepub, User user) {
         this.id = id;
         this.value = value;
         this.datepub = datepub;
