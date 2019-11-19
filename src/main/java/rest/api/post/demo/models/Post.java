@@ -1,6 +1,9 @@
 package rest.api.post.demo.models;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.List;
 
 @Document (collection = "Posts")
 public class Post {
@@ -11,6 +14,7 @@ public class Post {
     private User user;
     private String datepub;
     private String title;
+    private List<Comment> comments;
 
     public String getTitle() {
         return title;
@@ -44,15 +48,28 @@ public class Post {
         this.value = value;
     }
 
-    public Post(String id, String value,String  datepub, User user) {
+    public void setId(String id) {
         this.id = id;
-        this.value = value;
-        this.datepub = datepub;
-        this.user = user;
     }
 
+    public void setDatepub(String datepub) {
+        this.datepub = datepub;
+    }
 
+    public List<Comment> getComments() {
+        return comments;
+    }
 
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
 
-
+    public Post(String id, String value, User user, String datepub, String title, List<Comment> comments) {
+        this.id = id;
+        this.value = value;
+        this.user = user;
+        this.datepub = datepub;
+        this.title = title;
+        this.comments = comments;
+    }
 }

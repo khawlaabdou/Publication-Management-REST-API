@@ -2,6 +2,7 @@ package rest.api.post.demo.models;
 
 import java.sql.Date;
 
+
 public class Comment {
 
 
@@ -40,4 +41,12 @@ public class Comment {
         return body;
     }
 
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "id=" + id +
+                ", body=" + body +
+                ", datecomment=" + datecomment +
+                '}';
+    }
 }
