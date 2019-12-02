@@ -11,12 +11,24 @@ public class User {
     private Integer id;
     private String username;
     private List<Post> posts;
+    private  List <Comment>comments;
 
 
-    public User(Integer id, String username, List<Post> posts) {
+    public void setComment(List<Comment> comment) {
+        this.comments = comment;
+    }
+
+    public List<Comment> getComment() {
+        return comments;
+    }
+
+
+
+    public User(Integer id, String username, List<Post> posts, List<Comment> comments) {
         this.id = id;
         this.username = username;
         this.posts = posts;
+        this.comments = comments;
     }
 
     public List<Post> getPosts() {
@@ -45,8 +57,6 @@ public class User {
     public void setUsername(String username) {
         this.username = username;
     }
-
-
 
 
 }

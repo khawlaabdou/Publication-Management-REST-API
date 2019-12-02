@@ -17,6 +17,8 @@ public class PostService {
    @Autowired
     private PostRepositpory postRepositpory;
 
+
+
     public Post create(Post post){
         return postRepositpory.save(post);
 
