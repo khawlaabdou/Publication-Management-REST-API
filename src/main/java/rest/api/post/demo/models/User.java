@@ -8,7 +8,7 @@ import java.util.List;
 public class User {
 
     @Id
-    private Integer id;
+    private String id;
     private String username;
     private List<Post> posts;
     private  List <Comment>comments;
@@ -24,7 +24,7 @@ public class User {
 
 
 
-    public User(Integer id, String username, List<Post> posts, List<Comment> comments) {
+    public User(String id, String username, List<Post> posts, List<Comment> comments) {
         this.id = id;
         this.username = username;
         this.posts = posts;
@@ -42,7 +42,7 @@ public class User {
 
 
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
@@ -50,7 +50,7 @@ public class User {
         return username;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
