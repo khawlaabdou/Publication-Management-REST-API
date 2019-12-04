@@ -7,12 +7,17 @@ public class Comment {
 
 
     private Integer id;
-    private Integer body;
+    private String body;
     private Date datecomment;
-    public Comment(Integer id, Integer body, Date datecomment) {
+    private User user;
+    private Post post;
+
+    public Comment(Integer id, String body, Date datecomment, User user , Post post) {
         this.id = id;
         this.body = body;
         this.datecomment = datecomment;
+        this.user = user;
+        this.post = post;
     }
 
 
@@ -21,7 +26,7 @@ public class Comment {
         this.id = id;
     }
 
-    public void setBody(Integer body) {
+    public void setBody(String body) {
         this.body = body;
     }
 
@@ -37,16 +42,34 @@ public class Comment {
         return id;
     }
 
-    public Integer getBody() {
+    public String getBody() {
         return body;
     }
 
+
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Post getPost() {
+        return post;
+    }
+
+    public void setPost(Post post) {
+        this.post = post;
+    }
+
+
     @Override
     public String toString() {
-        return "Comment{" +
-                "id=" + id +
-                ", body=" + body +
-                ", datecomment=" + datecomment +
-                '}';
+        return "Comment{" + "id=" + id + ", body='" + body + '\'' + ", datecomment=" + datecomment + ", user=" + user + ", post=" + post + '}';
     }
+
+
+
 }
