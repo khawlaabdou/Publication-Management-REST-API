@@ -51,7 +51,7 @@ public class CommentService {
         commentRepository.deleteById(String.valueOf(c));
     }
 
-    public Comment getPost (String id) {
+    public Comment getComment (String id) {
         return commentRepository.findById(id);
     }
 
